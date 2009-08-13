@@ -17,3 +17,7 @@ require dirname(dirname(__FILE__)) . '/Stream/TokyoTyrant.php';
 Stream_TokyoTyrant::register();
 include "tokyotyrant://localhost:1978/test1.php";
 assert($a === 11);
+
+file_put_contents("tokyotyrant://localhost:1978/test3.php", 'himote');
+assert(file_get_contents("tokyotyrant://localhost:1978/test3.php") === 'himote');
+

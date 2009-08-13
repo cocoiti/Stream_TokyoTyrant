@@ -67,7 +67,7 @@ class Stream_TokyoTyrant
     function stream_write($data)
     {
         $left = substr($this->data, 0, $this->position);
-        $right = substr($this_data, $this->position + strlen($data));
+        $right = substr($this->data, $this->position + strlen($data));
         $this->data = $left . $data . $right;
         $this->position += strlen($data);
         $this->tt->put($this->key, $this->data);
@@ -118,5 +118,9 @@ class Stream_TokyoTyrant
                 return false;
         }
     }
-
+    public function stream_stat()
+    {
+        //
+        return array();
+    }
  }
