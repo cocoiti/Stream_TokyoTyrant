@@ -1,5 +1,5 @@
 <?php
-//require_once "Net/TokyoTyrant.php";
+require_once "Net/TokyoTyrant.php";
 
 class Stream_TokyoTyrant
 {

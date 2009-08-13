@@ -2,6 +2,7 @@
 require "/home/cocoiti/Net_TokyoTyrant/trunk/Net/TokyoTyrant.php";
 $tt = new Net_TokyoTyrant();
 $tt->connect('localhost', 1978);
+$tt->vanish();
 $test1 ='<?php $a = 11;';
 
 $tt->put('test1.php', $test1);
